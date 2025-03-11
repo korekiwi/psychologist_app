@@ -1,0 +1,43 @@
+/* #BC986A бежевый
+#659DBD голубой
+#8D8741 зеленый
+#DAAD86 розовый
+#FBEEEC1 песочный */
+
+
+/* #E27D60 красный
+#85DCB rgb(118, 204, 201) голубой
+#E8A87C оранжевый
+#C38D9E фиол
+#41B3A3 зеленый */
+
+
+
+body {
+    background-color:#7FC8BB!important;
+}
+
+.navbar {
+    background-color:  #E8A87C;
+    border-top: 7px solid #e28960;
+    border-bottom: 7px solid #e28960;
+    border-radius: 5px;
+}
+
+.navbar-brand {
+    margin: 10px;
+    font-weight: bold;
+}
+
+.navbar-nav {
+    margin: 10px auto;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.active {
+    font-size: 20px;
+    background-color: #e28960;
+    border-radius: 10px;
+}

@@ -24,6 +24,8 @@ from core import views
 urlpatterns = (
     [
     path('admin/', admin.site.urls),
-    path('', views.HomePage.as_view(), name='home')
+    path('', views.HomePage.as_view(), name='home'),
+    path('materials/', views.MaterialsPage.as_view(), name='materials'),
+    path('questions/', views.QuestionsPage.as_view(), name='questions'),
     ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 )
