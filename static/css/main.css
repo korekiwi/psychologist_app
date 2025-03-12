@@ -41,3 +41,29 @@ body {
     background-color: #e28960;
     border-radius: 10px;
 }
+
+.row {
+    justify-content: center;
+    align-items: center;
+}
+
+.container-fluid {
+    margin-top: 100px;
+}
+
+.col-lg-2 {
+    background-color: rgba(255,255,255,0.7);
+    border: 3px solid white;
+    border-radius: 10px;
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+}
+
+.col-lg-2 img {
+    width: 300px;
+    height: 300px;
+}
