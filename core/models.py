@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 
 class Question(models.Model):
@@ -19,6 +20,9 @@ class Question(models.Model):
 
     def __str__(self):
         return f'{self.name} - {self.question}'
+
+    def get_absolute_url(self):
+        return reverse("question", args=[self.pk])
 
     def save(self, *args, **kwargs):
         if self.pk:

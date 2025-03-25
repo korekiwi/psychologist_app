@@ -1,1 +1,43 @@
 {% extends "base.html" %}
+{% load static %}
+{% load tags %}
+
+{% block content %}
+<h4 class='heading'>Вопросы</h4>
+
+<div class="container">
+    {% for question in questions %}
+
+    {% include "load_questions.html" %}
+
+    {% empty %}
+    <div class="alert alert-warning">
+        <i class="bi bi-info-circle">Посты не найдены</i>
+    </div>
+
+    {% endfor %}
+</div>
+
+<div class="pages">
+    {% if questions.has_previous and questions.previous_page_number > 1 %}
+    <a href="?{% query_transform page=1 %}">1</a> |
+    {% endif %}
+    {% if questions.has_previous and questions.previous_page_number > 1|add:1 %}
+        <span>... |</span>
+    {% endif %}
+    {% if questions.has_previous %}
+        <a href="?{% query_transform page=questions.previous_page_number %}">{{questions.previous_page_number}}</a> |
+    {% endif %}
+    <span class="now_page"> {{questions.number}}</span>
+    {% if questions.has_next  %}
+    | <a href="?{% query_transform page=questions.next_page_number %}">{{questions.next_page_number}}</a>
+    {% endif %}
+    {% if questions.has_next and questions.next_page_number < questions.paginator.num_pages|add:-1 %}
+        <span> | ... </span>
+    {% endif %}
+    {% if questions.next_page_number != questions.paginator.num_pages %}
+    | <a href="?{% query_transform page=questions.paginator.num_pages %}">{{questions.paginator.num_pages}}</a>
+    {% endif %}
+</div>
+
+{% endblock content %}

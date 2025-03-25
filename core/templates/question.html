@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="heading"></div>
+{% include "load_questions.html" %}
+
+<div class="alert">
+    <a class="url" href="{% url "questions" %}">Назад к вопросам</a>
+</div>
+
+{% endblock content %}
+

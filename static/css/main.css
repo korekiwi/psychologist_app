@@ -14,13 +14,13 @@
 
 
 body {
-    background-color:#7FC8BB!important;
+    background-color:#FBEEC1!important;
 }
 
 .navbar {
-    background-color:  #E8A87C;
-    border-top: 7px solid #e28960;
-    border-bottom: 7px solid #e28960;
+    background-color:  #BC986A;
+    border-top: 7px solid #DAAD86;
+    border-bottom: 7px solid #DAAD86;
     border-radius: 5px;
 }
 
@@ -38,7 +38,7 @@ body {
 
 .active {
     font-size: 20px;
-    background-color: #e28960;
+    background-color: #DAAD86;
     border-radius: 10px;
 }
 
@@ -66,4 +66,47 @@ body {
 .col-lg-2 img {
     width: 300px;
     height: 300px;
+}
+
+.heading {
+    text-align: center;
+    color: black;
+    margin: auto;
+    padding: 100px 0px 50px 0px;
+}
+
+.card {
+    background-color:  rgba(255,255,255,0.7)!important;
+    text-align: center;
+}
+
+.url {
+    text-align: center;
+    color: black;
+    font-size: 18px;
+}
+
+.alert {
+    text-align: center;
+    margin: auto;
+    background-color:  rgba(255,255,255,0.7);
+    width: 300px;
+    border: 3px solid white;
+    border-radius: 10px;
+}
+
+.pages {
+    margin: 10px auto;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.pages a {
+    color: black;
+}
+
+.now_page {
+    text-decoration: underline;
+    font-size: 30px;
 }
