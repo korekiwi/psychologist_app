@@ -3,6 +3,7 @@ def menu_items(request):
         {"title": "Копилка", "url_name": "materials"},
         {"title": "Главная", "url_name": "home"},
         {"title": "Консультирование", "url_name": "questions"},
+        {"title": "Запись на прием", "url_name": "appointment"},
     ]
 
     current_url_name = request.resolver_match.view_name

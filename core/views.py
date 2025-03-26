@@ -4,7 +4,7 @@ from django.core.paginator import Paginator
 from django.db.models import Q, F
 
 from core.models import Question
-from core.forms import QuestionForm
+from core.forms import QuestionForm, AppointmentForm
 
 
 class HomePage(TemplateView):
@@ -76,6 +76,20 @@ class ViewQuestion(TemplateView):
         context['question'] = question
 
         return context
+
+
+class AppointmentPage(CreateView):
+    template_name = "appointment.html"
+    form_class = AppointmentForm
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'Запись на прием'
+        return context
+
+    def get_success_url(self):
+        self.request.session['thanks_message'] = "Ваша запись была одобрена. Скоро я свяжусь с Вами лично."
+        return reverse("thanks")
 
 
 class ThanksPage(TemplateView):

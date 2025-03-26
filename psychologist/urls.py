@@ -28,6 +28,7 @@ urlpatterns = (
     path('materials/', views.MaterialsPage.as_view(), name='materials'),
     path('questions/', views.QuestionsPage.as_view(), name='questions'),
     path('questions/<slug:question_id>', views.ViewQuestion.as_view(), name='question'),
+    path('appointment/', views.AppointmentPage.as_view(), name='appointment'),
     path('thanks/', views.ThanksPage.as_view(), name='thanks'),
     ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 )
