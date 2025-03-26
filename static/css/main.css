@@ -14,13 +14,13 @@
 
 
 body {
-    background-color:#FBEEC1!important;
+    background-color: #8badbf!important;
 }
 
 .navbar {
-    background-color:  #BC986A;
-    border-top: 7px solid #DAAD86;
-    border-bottom: 7px solid #DAAD86;
+    background-color:  #5d80a1;
+    border-top: 4px solid #f4f4eb;
+    border-bottom: 4px solid #f4f4eb;
     border-radius: 5px;
 }
 
@@ -38,7 +38,7 @@ body {
 
 .active {
     font-size: 20px;
-    background-color: #DAAD86;
+    background-color: #f4f4eb;
     border-radius: 10px;
 }
 
@@ -61,6 +61,7 @@ body {
     align-items: center;
     padding: 10px;
     text-align: center;
+    font-size: 20px;
 }
 
 .col-lg-2 img {
@@ -109,4 +110,53 @@ body {
 .now_page {
     text-decoration: underline;
     font-size: 30px;
+}
+
+.thanks {
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    margin: 20px;
+}
+
+
+.required::after {
+    content: '*';
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+h3 a{
+    color: black;
+}
+
+.name {
+    font-size: 18px;
+    color: black;
+    font-style: italic;
+}
+
+.question {
+    font-size: 18px;
+}
+
+.alone {
+    width: 95%;
+    margin: auto;
+    padding: 10px;
+}
+
+.sub {
+    font-size: 17px;
+    font-style: italic;
+}
+
+label {
+    font-weight: bold;
+    font-size: 21px;
+}
+
+.med {
+    font-size: 17px;
 }

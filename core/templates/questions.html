@@ -11,7 +11,7 @@
     {% include "load_questions.html" %}
 
     {% empty %}
-    <div class="alert alert-warning">
+    <div class="alert">
         <i class="bi bi-info-circle">Посты не найдены</i>
     </div>
 
@@ -38,6 +38,55 @@
     {% if questions.next_page_number != questions.paginator.num_pages %}
     | <a href="?{% query_transform page=questions.paginator.num_pages %}">{{questions.paginator.num_pages}}</a>
     {% endif %}
+</div>
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h2 class="card-title text-center mb-4">Задать вопрос</h2>
+
+                    <p class='med'>По желанию Вы можете оставить контакты для обратной связи. <br> Другим пользователям они не будут видны.</p>
+                    
+                    <form method="post">
+                        {% csrf_token %}
+                        
+                        {% if form.non_field_errors %}
+                        <div class="alert alert-danger">
+                            {{ form.non_field_errors }}
+                        </div>
+                        {% endif %}
+                        
+                        {% for field in form %}
+                        <div class="mb-3">
+                            <label for="{{ field.id_for_label }}" class="form-label {% if field.name in 'title name question' %}required{% endif %}">
+                                {{ field.label }}
+                            </label>
+                            {{ field }}
+                            {% if field.errors %}
+                            <div class="alert alert-danger mt-2">
+                                {{ field.errors }}
+                            </div>
+                            {% endif %}
+                            {% if field.help_text %}
+                            <div class="form-text text-muted">
+                                {{ field.help_text }}
+                            </div>
+                            {% endif %}
+                        </div>
+                        {% endfor %}
+
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-light">
+                                <i class="bi bi-send me-2"></i>Отправить
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 {% endblock content %}

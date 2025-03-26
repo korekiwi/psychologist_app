@@ -9,6 +9,7 @@ class Question(models.Model):
         (2, 'Отклонен'),
     ]
 
+    title = models.CharField(max_length=100, verbose_name='Проблема')
     name = models.CharField(max_length=100, verbose_name="Имя")
     phone = models.CharField(max_length=20, verbose_name="Телефон", null=True, blank=True)
     email = models.CharField(max_length=50, verbose_name="Email", null=True, blank=True)
@@ -17,6 +18,7 @@ class Question(models.Model):
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Дата создания')
     status = models.IntegerField(choices=STATUS_CHOICES, default=0, verbose_name='Статус')
     answer = models.TextField(null=True, blank=True, verbose_name="Ответ")
+    views = models.IntegerField(blank=True, default=0,  verbose_name='Просмотры')
 
     def __str__(self):
         return f'{self.name} - {self.question}'

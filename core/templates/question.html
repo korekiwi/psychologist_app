@@ -3,7 +3,25 @@
 
 {% block content %}
 <div class="heading"></div>
-{% include "load_questions.html" %}
+<div class="card mb-4 shadow alone">
+    <div class="card-body">
+        <h3 class="card-title text-dark">{{ question.title }}</h2>
+        <p class='card-text name'>{{question.name}}</p>
+        <p class="card-text question">{{ question.question}}</p>
+
+        <p class='card-text sub'>Просмотры: {{question.views}} | {{question.created_at|date:"d.m.Y"}}</p>
+        
+    </div>
+</div>
+
+{% if question.answer %}
+    <div class="card mb-4 shadow alone">
+        <div class="card-body">
+            <h4 class="card-title text-dark">Ответ:</h4>
+            <p class="card-text question">{{ question.answer}}</p>
+        </div>
+    </div>
+{% endif %}
 
 <div class="alert">
     <a class="url" href="{% url "questions" %}">Назад к вопросам</a>

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12 thanks">
+        {{thanks_message}}
+      </div>
+    </div>
+  </div>
+
+  <div class="alert">
+    <a class="url" href="{% url "home" %}">Вернуться на главную страницу</a>
+</div>
+
+{% endblock content %}
