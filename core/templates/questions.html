@@ -3,7 +3,32 @@
 {% load tags %}
 
 {% block content %}
-<h4 class='heading'>Вопросы</h4>
+
+<div class="container py-5">
+    <h4 class='heading'>Поиск по вопросам</h4>
+    <div class="med">На этой странице вы можете задать интересующий вас вопрос, а также прочитать ответы других пользователей.</div>
+    <div class="row justify-content-center">
+        <form method="GET" action="{% url "questions" %}">
+            <input type="text" class='form-control' name="search_query" placeholder="Поиск по вопросам..." value="{{ request.GET.search_query|default:'' }}">
+            <div class="d-grid">
+                <button class='form-control' type="submit" class="btn btn-light">
+                    <i class="bi bi-send me-2"></i>Искать
+                </button>
+            </div>
+
+            <div class='sort'>
+            <h4>Сортировать:</h4>
+            <input class='form-check-input' type="radio" name="sort_by" id="sort_views" value="views" {% if request.GET.sort_by == "views" or not request.GET.sort_by%}checked{% endif %}>
+            <label class='form-check-label' for="sort_views">По количеству просмотров</label> <br>
+            <input class='form-check-input' type="radio" name="sort_by" id="sort_created" value="created_at" {% if request.GET.sort_by == "created_at"%}checked{% endif %}>
+            <label class='form-check-label' for="sort_created">По дате создания</label>
+            </div>
+
+        </form>
+
+    </div>
+</div>
+
 
 <div class="container">
     {% for question in questions %}

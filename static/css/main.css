@@ -73,7 +73,7 @@ body {
     text-align: center;
     color: black;
     margin: auto;
-    padding: 100px 0px 50px 0px;
+    padding: 100px 0px 20px 0px;
 }
 
 .card {
@@ -153,10 +153,17 @@ h3 a{
 }
 
 label {
-    font-weight: bold;
+    /* font-weight: bold; */
     font-size: 21px;
 }
 
 .med {
     font-size: 17px;
+    text-align: center;
+    padding: 10px;
+}
+
+.sort {
+    text-align: center;
+    margin: 10px;
 }
