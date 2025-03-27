@@ -2,7 +2,14 @@
 #659DBD голубой
 #8D8741 зеленый
 #DAAD86 розовый
-#FBEEEC1 песочный */
+#FBEEEC1 песочный 
+
+#fdf5df
+#5ebec4
+
+
+
+*/
 
 
 /* #E27D60 красный
@@ -14,19 +21,21 @@
 
 
 body {
-    background-color: #8badbf!important;
+    background-color: #FBEEC1!important;
 }
 
 .navbar {
-    background-color:  #5d80a1;
-    border-top: 4px solid #f4f4eb;
-    border-bottom: 4px solid #f4f4eb;
-    border-radius: 5px;
+    background-color:  #659DBD;
+    /* border-top: 4px solid #f4f4eb;
+    border-bottom: 4px solid #f4f4eb; */
+    /* border-radius: 5px; */
 }
 
 .navbar-brand {
     margin: 10px;
+    font-size: 30px!important;
     font-weight: bold;
+    font-family: "Amatic SC";
 }
 
 .navbar-nav {
@@ -34,6 +43,7 @@ body {
     font-size: 18px;
     font-weight: bold;
     text-align: center;
+    font-family: "Comfortaa";
 }
 
 .active {
@@ -51,7 +61,7 @@ body {
     margin-top: 100px;
 }
 
-.col-lg-2 {
+/* .col-lg-2 {
     background-color: rgba(255,255,255,0.7);
     border: 3px solid white;
     border-radius: 10px;
@@ -62,11 +72,43 @@ body {
     padding: 10px;
     text-align: center;
     font-size: 20px;
+} */
+
+.col-lg-6 {
+    text-align: center;
 }
 
-.col-lg-2 img {
-    width: 300px;
-    height: 300px;
+.biggest {
+    font-family: "Amatic SC";
+    font-size: 100px;
+    color: #659DBD;
+}
+
+.big {
+    font-family: "Amatic SC";
+    font-weight: 700;
+    font-size: 70px;
+}
+
+.bigger {
+    font-family: "Comfortaa";
+    font-size: 30px;
+}
+
+.text {
+    font-family: "Comfortaa";
+    font-size: 20px;
+}
+
+.col-lg-4 img {
+    margin: auto;
+    display: block;
+    max-width: 500px;
+    max-height: 500px;
+    width: auto;
+    height: auto;
+    border: 2px solid #255c7b;
+    border-radius: 10px;
 }
 
 .heading {
@@ -74,6 +116,11 @@ body {
     color: black;
     margin: auto;
     padding: 100px 0px 20px 0px;
+}
+
+.list-group-item {
+    background-color:  rgba(255,255,255,0.7)!important;
+    font-family: "Comfortaa";
 }
 
 .card {
@@ -166,4 +213,17 @@ label {
 .sort {
     text-align: center;
     margin: 10px;
+}
+
+.search {
+    margin: auto;
+}
+
+.search h4 {
+    margin: 20px;
+}
+
+.search-input {
+    text-align: center;
+    margin: 3px 0px;
 }

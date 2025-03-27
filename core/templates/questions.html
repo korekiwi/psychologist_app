@@ -4,14 +4,17 @@
 
 {% block content %}
 
+<div class="heading"></div>
+
 <div class="container py-5">
-    <h4 class='heading'>Поиск по вопросам</h4>
+    <div class="card shadow col-md-8 search">
+    <h4>Поиск по вопросам</h4>
     <div class="med">На этой странице вы можете задать интересующий вас вопрос, а также прочитать ответы других пользователей.</div>
     <div class="row justify-content-center">
         <form method="GET" action="{% url "questions" %}">
-            <input type="text" class='form-control' name="search_query" placeholder="Поиск по вопросам..." value="{{ request.GET.search_query|default:'' }}">
+            <input type="text" class='form-control search-input' name="search_query" placeholder="Поиск по вопросам..." value="{{ request.GET.search_query|default:'' }}">
             <div class="d-grid">
-                <button class='form-control' type="submit" class="btn btn-light">
+                <button class='form-control search-input' type="submit" class="btn btn-light">
                     <i class="bi bi-send me-2"></i>Искать
                 </button>
             </div>
@@ -27,6 +30,7 @@
         </form>
 
     </div>
+    </div>
 </div>
 
 
@@ -36,8 +40,8 @@
     {% include "load_questions.html" %}
 
     {% empty %}
-    <div class="alert">
-        <i class="bi bi-info-circle">Посты не найдены</i>
+    <div class="alert shadow">
+        <i class="bi bi-info-circle"></i> Посты не найдены
     </div>
 
     {% endfor %}
