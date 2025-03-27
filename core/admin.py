@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from core.models import Question, Appointment
+from core.models import Question, Appointment, Document
 
 
 def make_accepted(modeladmin, request, queryset):
@@ -42,3 +42,9 @@ class AppointmentAdmin(admin.ModelAdmin):
 
     actions = [make_accepted, make_declined, make_unverified]
 
+
+@admin.register(Document)
+class DocumentAdmin(admin.ModelAdmin):
+    list_display = ('title', 'year', 'description')
+    search_fields = ('title', 'year', 'description')
+    list_filter = ('title', 'year')

@@ -3,13 +3,18 @@ from django.views.generic import TemplateView, CreateView, FormView
 from django.core.paginator import Paginator
 from django.db.models import Q, F
 
-from core.models import Question
+from core.models import Question, Document
 from core.forms import QuestionForm, AppointmentForm
 
 
 class HomePage(TemplateView):
     template_name = "main.html"
-    extra_context = {"title": 'Главная'}
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'Детский психолог Шикуля Н.А.'
+        context['documents'] = Document.objects.all()
+        return context
 
 
 class MaterialsPage(TemplateView):

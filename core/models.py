@@ -63,3 +63,14 @@ class Appointment(models.Model):
     class Meta:
         verbose_name = "Запись на прием"
         verbose_name_plural = "Записи на прием"
+
+
+class Document(models.Model):
+    title = models.CharField(max_length=100, verbose_name='Название')
+    year = models.PositiveIntegerField(verbose_name='Год выпуска')
+    image = models.ImageField(upload_to='education/', blank=True, null=True, verbose_name='Фотография')
+    description = models.TextField(verbose_name='Описание')
+
+    class Meta:
+        verbose_name = 'Документ'
+        verbose_name_plural = 'Документы'

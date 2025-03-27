@@ -24,6 +24,26 @@ body {
     background-color: #FBEEC1!important;
 }
 
+.comfortaa {
+    font-family: "Comfortaa";
+    font-size: 20px;
+}
+
+.amatic {
+    font-family: "Amatic SC";
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.footer-icon {
+    margin: auto;
+    display: block;
+    max-width: 140px;
+    max-height: 140px;
+    width: auto;
+    height: auto;
+}
+
 .navbar {
     background-color:  #659DBD;
     /* border-top: 4px solid #f4f4eb;
@@ -44,6 +64,10 @@ body {
     font-weight: bold;
     text-align: center;
     font-family: "Comfortaa";
+}
+
+footer {
+    background-color: #659DBD;
 }
 
 .active {
@@ -111,6 +135,15 @@ body {
     border-radius: 10px;
 }
 
+.btn-docs {
+    background-color:  rgba(255,255,255,0.4)!important;
+    font-family: "Comfortaa";
+    padding: 3px;
+    font-weight: 700;
+    margin: 10px;
+    border: 1px solid black!important;
+}
+
 .heading {
     text-align: center;
     color: black;
@@ -119,8 +152,38 @@ body {
 }
 
 .list-group-item {
-    background-color:  rgba(255,255,255,0.7)!important;
+    background-color:  rgba(255,255,255,0)!important;
     font-family: "Comfortaa";
+    border: none!important;
+    font-size: 24px;
+}
+
+.bold {
+    font-weight: 700;
+    font-size: 26px;
+    color: #659DBD;
+}
+
+.doc-descr {
+    font-family: "Comfortaa";
+    background-color:  rgba(101, 157, 189, 0.3);
+    padding: 5px;
+    border: 1px solid  #659DBD;
+    border-radius: 10px;
+}
+
+#inf img {
+    margin: 10px auto;
+    display: block;
+    max-width: 300px;
+    max-height: 300px;
+    width: auto;
+    height: auto;
+}
+
+#inf .card {
+    margin: 10px;
+    padding: 5px;
 }
 
 .card {

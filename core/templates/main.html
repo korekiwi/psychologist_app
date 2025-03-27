@@ -20,14 +20,46 @@
       <div class="col-lg-6 me-2">
         <div class="big">ОБРАЗОВАНИЕ</div>
         <div class="bigger">Высшее профессиональное</div>
-        <ul class="list-group">
-          <li class="list-group-item">Томский медицинский институт 1989г, врач-биофизик.</li>
-          <li class="list-group-item">Ростовский Государственный Университет (РГУ) 2006г, практический психолог.</li>
-          <li class="list-group-item">Повышение квалификации там же по специальности клинический (медицинский) психолог, 2006г.</li>
-          <li class="list-group-item">Общий медицинский и психологический стаж - 25 лет; в должности педагог-психолог: 12 лет,
+         <ul class="list-group">
+          <li class="list-group-item">• Томский медицинский институт 1989г, <span class="bold">врач-биофизик.</span></li>
+          <li class="list-group-item">• Ростовский Государственный Университет (РГУ) 2006г, <span class="bold">практический психолог.</span></li>
+          <li class="list-group-item">• Повышение квалификации там же по специальности <span class="bold">клинический (медицинский) психолог, 2006г.</span></li>
+          <li class="list-group-item">• Общий медицинский и психологический стаж - <span class="bold">25 лет</span>; в должности педагог-психолог: 12 лет,
          в том числе в реабилитационном центре для детей нуждающихся в медико-социальной и психолого-педагогической помощи (ППМС-центр).</li>
         </ul>
+
+        <button class='btn btn-docs shadow' data-bs-toggle="collapse" href="#docs" role="button" aria-expanded="false" aria-controls="docs">Посмотреть документы</button>
+
+        <div class="collapse" id='docs'>
+        {% for document in documents %}
+        <div class="card shadow">
+          <div class="card-body">
+            <h4>{{document.title}}</h4>
+            <div class="row">
+              <div class="col-md-5">
+                <a href="{{document.image.url}}"><img class='shadow' src="{{document.image.url}}" alt=""></a>
+              </div>
+              <div class="col-md-5 doc-descr shadow">{{document.description}}</div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
       </div>
     </div>
+
+  <div class="row" id='about'>
+    <div class="col-lg-6">
+      <div class="big">C КЕМ Я РАБОТАЮ</div>
+      <ul class="list-group">
+        <li class="list-group-item">• <span class="bold">У детей-дошкольников:</span> задержка психического развития (ЗПР) или психоречевого развития (ЗПРР), ранний детский аутизм (РДА), дефицит внимания (СДВ или СДВГ) и многое другое.</li>
+        <li class="list-group-item">• <span class="bold">У детей-школьников:</span> негативизм по отношению к обучению, отсутствие самоконтроля и саморегуляции, отсутствие способности к планированию своих действий, проблемы в поведении и академическая неуспеваемость.</li>
+        <li class="list-group-item">• Я успешно работаю <span class="bold">с неговорящими детьми,</span> владею современными методиками запуска речи, в том числе у детей с тяжелыми нарушениями.</li>
+        <li class="list-group-item">Я оказываю психологическую поддержку родителям - мамам, папам, бабушкам и дедушкам :) Здоровый взрослый  -  главное условие для успешного развития ребенка.</li>
+      </ul>
+    </div>
+  </div>
+
   </div>
 {% endblock content %}
