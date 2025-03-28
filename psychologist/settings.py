@@ -35,12 +35,12 @@ ALLOWED_HOSTS = [
     "127.0.0.1",
     "188.225.44.169",
     "korekiwi-psychologist-app-39a0.twc1.net",
-    "shikulja-natalja.ru",
+    "natalja-shikulja.ru",
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://shikulja-natalja.ru",
-    "http://shikulja-natalja.ru",
+    "https://natalja-shikulja.ru",
+    "http://natalja-shikulja.ru",
     "http://127.0.0.1",
     "https://127.0.0.1",
     "http://188.225.44.169",
