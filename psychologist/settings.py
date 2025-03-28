@@ -39,7 +39,6 @@ ALLOWED_HOSTS = [
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://natalja-shikulja.ru",
     "http://natalja-shikulja.ru",
     "http://127.0.0.1",
     "https://127.0.0.1",
