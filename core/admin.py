@@ -21,6 +21,7 @@ class QuestionAdmin(admin.ModelAdmin):
     search_fields = ("title", "name", "question")
     list_editable = ("status", "answer")
     list_filter = ("name", "status", "phone", "email")
+    list_per_page = 5
 
     make_accepted.short_description = 'Одобрить выбранные записи'
     make_declined.short_description = 'Отклонить выбранные записи'
@@ -35,6 +36,7 @@ class AppointmentAdmin(admin.ModelAdmin):
     search_fields = ("title", "adult_name", "child_name")
     list_editable = ("status",)
     list_filter = ("adult_name", "child_name", "status", "phone", "email")
+    list_per_page = 5
 
     make_accepted.short_description = 'Подтвердить выбранные записи'
     make_declined.short_description = 'Отклонить выбранные записи'
@@ -48,3 +50,4 @@ class DocumentAdmin(admin.ModelAdmin):
     list_display = ('title', 'year', 'description')
     search_fields = ('title', 'year', 'description')
     list_filter = ('title', 'year')
+    list_per_page = 5

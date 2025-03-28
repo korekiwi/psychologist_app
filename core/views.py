@@ -1,5 +1,5 @@
 from django.shortcuts import reverse
-from django.views.generic import TemplateView, CreateView, FormView
+from django.views.generic import TemplateView, CreateView
 from django.core.paginator import Paginator
 from django.db.models import Q, F
 

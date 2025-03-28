@@ -1,5 +1,4 @@
 from django import forms
-from django.core.validators import EmailValidator
 import re
 
 from core.models import Question, Appointment
