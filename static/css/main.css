@@ -29,6 +29,14 @@ body {
     font-size: 20px;
 }
 
+.comfortaa-sm {
+    font-family: "Comfortaa";
+}
+
+.amatic-sm {
+    font-family: "Amatic SC";
+}
+
 .amatic {
     font-family: "Amatic SC";
     font-size: 50px;
@@ -52,8 +60,8 @@ body {
 }
 
 .navbar-brand {
-    margin: 10px;
-    font-size: 30px!important;
+    margin: 3px;
+    font-size: 25px!important;
     font-weight: bold;
     font-family: "Amatic SC";
 }
@@ -168,6 +176,7 @@ footer {
     font-family: "Comfortaa";
     background-color:  rgba(101, 157, 189, 0.3);
     padding: 5px;
+    margin: 0px 30px;
     border: 1px solid  #659DBD;
     border-radius: 10px;
 }

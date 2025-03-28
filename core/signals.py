@@ -38,7 +38,7 @@ def send_telegram_notification(sender, instance, created, **kwargs):
 *Имя:* {instance.name}
 *Телефон:* {instance.phone or 'не указан'}
 *Email:* {instance.email or 'не указан'}
-*Телефон:* {instance.phone or 'не указан'}
+*Телеграм:* {instance.telegram or 'не указан'}
 *Описание проблемы:* {instance.question}
 -------------------------------------------------------------
 """

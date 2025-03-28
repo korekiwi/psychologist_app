@@ -19,7 +19,7 @@
     {% block header %}
 
     <nav id=1 class="navbar navbar-expand-lg navbar-light fixed-top shadow">
-        <a class="navbar-brand" href="#">ДЕТСКИЙ ПСИХОЛОГ ШИКУЛЯ Н.А.</a>
+        <a class="navbar-brand" href="#">ДИАГНОСТИКА, РАЗВИТИЕ, КОРРЕКЦИЯ</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -27,7 +27,7 @@
         <ul class="navbar-nav me-2">
             {% for item in menu_items %}
             <li class="nav-item {% if item.is_active %}active{% endif %}">
-                <a class="nav-link" href="{% url item.url_name %}{% if item.url_hash %}{{item.url_hash}}{% endif %}">{{item.title}}</a>
+                <a class="nav-link" href="{% url item.url_name %}">{{item.title}} <i class="bi {{item.icon}}"></i></a>
               </li>
             {% endfor %}
         </ul>
@@ -44,19 +44,9 @@
     <footer>
         <div class="container-fluid">
             <div class="row">
-                {% comment %} <div class="col-lg-6">
-                    <img class='footer-icon' src="{% static "images/favicon.ico" %}" alt="">
-                </div> {% endcomment %}
-                {% comment %} <div class="col-lg-4 amatic">КОНТАКТЫ</div>
-                <div class="col-lg-4"><p class='comfortaa'><i class="bi bi-envelope"></i> shik.66@mail.ru</p></div>
-                <div class="col-lg-4"><p class='comfortaa'> <i class="bi bi-telegram"></i> @Shikulja</p></div> {% endcomment %}
-                {% comment %} <div class="col-lg-6">
-                    <div class="amatic">КОНТАКТЫ</div>
-                    <p class='comfortaa'><i class="bi bi-envelope"></i> shik.66@mail.ru</p>
-                    <p class='comfortaa'> <i class="bi bi-telegram"></i> @Shikulja</p>
-                </div> {% endcomment %}
                 <div class="col-lg-6">
                     <p class="amatic">КОНТАКТЫ:</p>
+                    <p class='comfortaa'>г. Ростов-на-Дону</p>
                     <p class='comfortaa'><i class="bi bi-envelope"></i> shik.66@mail.ru </p>
                     <p class='comfortaa'><i class="bi bi-telegram"></i> @Shikulja</p>
                 </div>

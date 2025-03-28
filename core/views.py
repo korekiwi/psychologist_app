@@ -17,11 +17,6 @@ class HomePage(TemplateView):
         return context
 
 
-class MaterialsPage(TemplateView):
-    template_name = "materials.html"
-    extra_context = {"title": 'Копилка'}
-
-
 class QuestionsPage(CreateView):
     template_name = "questions.html"
     form_class = QuestionForm

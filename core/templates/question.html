@@ -3,7 +3,7 @@
 
 {% block content %}
 <div class="heading"></div>
-<div class="card mb-4 shadow alone">
+<div class="card mb-4 shadow alone comfortaa-sm">
     <div class="card-body">
         <h3 class="card-title text-dark">{{ question.title }}</h2>
         <p class='card-text name'>{{question.name}}</p>
@@ -15,7 +15,7 @@
 </div>
 
 {% if question.answer %}
-    <div class="card mb-4 shadow alone">
+    <div class="card mb-4 shadow alone comfortaa-sm">
         <div class="card-body">
             <h4 class="card-title text-dark">Ответ:</h4>
             <p class="card-text question">{{ question.answer}}</p>
@@ -24,7 +24,7 @@
 {% endif %}
 
 <div class="alert">
-    <a class="url" href="{% url "questions" %}">Назад к вопросам</a>
+    <a class="url comfortaa-sm" href="{% url "questions" %}">Назад к вопросам</a>
 </div>
 
 {% endblock content %}

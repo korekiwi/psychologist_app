@@ -8,23 +8,23 @@
 
 <div class="container py-5">
     <div class="card shadow col-md-8 search">
-    <h4>Поиск по вопросам</h4>
-    <div class="med">На этой странице вы можете задать интересующий вас вопрос, а также прочитать ответы других пользователей.</div>
+    <h4 class='big'>ПОИСК ПО ВОПРОСАМ</h4>
+    <div class="med comfortaa">На этой странице вы можете задать интересующий вас вопрос, а также прочитать ответы других пользователей.</div>
     <div class="row justify-content-center">
         <form method="GET" action="{% url "questions" %}">
-            <input type="text" class='form-control search-input' name="search_query" placeholder="Поиск по вопросам..." value="{{ request.GET.search_query|default:'' }}">
+            <input type="text" class='form-control search-input comfortaa' name="search_query" placeholder="Поиск по вопросам..." value="{{ request.GET.search_query|default:'' }}">
             <div class="d-grid">
-                <button class='form-control search-input' type="submit" class="btn btn-light">
-                    <i class="bi bi-send me-2"></i>Искать
+                <button class='form-control search-input comfortaa' type="submit" class="btn btn-light">
+                    <i class="bi bi-search"></i> Искать
                 </button>
             </div>
 
             <div class='sort'>
-            <h4>Сортировать:</h4>
-            <input class='form-check-input' type="radio" name="sort_by" id="sort_views" value="views" {% if request.GET.sort_by == "views" or not request.GET.sort_by%}checked{% endif %}>
-            <label class='form-check-label' for="sort_views">По количеству просмотров</label> <br>
-            <input class='form-check-input' type="radio" name="sort_by" id="sort_created" value="created_at" {% if request.GET.sort_by == "created_at"%}checked{% endif %}>
-            <label class='form-check-label' for="sort_created">По дате создания</label>
+            <h4 class='amatic'>Сортировать:</h4>
+            <input class='form-check-input comfortaa' type="radio" name="sort_by" id="sort_views" value="views" {% if request.GET.sort_by == "views" or not request.GET.sort_by%}checked{% endif %}>
+            <label class='form-check-label comfortaa' for="sort_views">По количеству просмотров</label> <br>
+            <input class='form-check-input comfortaa' type="radio" name="sort_by" id="sort_created" value="created_at" {% if request.GET.sort_by == "created_at"%}checked{% endif %}>
+            <label class='form-check-label comfortaa' for="sort_created">По дате создания</label>
             </div>
 
         </form>
@@ -40,14 +40,14 @@
     {% include "load_questions.html" %}
 
     {% empty %}
-    <div class="alert shadow">
+    <div class="alert shadow comfortaa-sm">
         <i class="bi bi-info-circle"></i> Посты не найдены
     </div>
 
     {% endfor %}
 </div>
 
-<div class="pages">
+<div class="pages comfortaa-sm">
     {% if questions.has_previous and questions.previous_page_number > 1 %}
     <a href="?{% query_transform page=1 %}">1</a> |
     {% endif %}
@@ -74,11 +74,11 @@
         <div class="col-md-8">
             <div class="card shadow">
                 <div class="card-body">
-                    <h2 class="card-title text-center mb-4">Задать вопрос</h2>
+                    <h2 class="card-title text-center mb-4 amatic">ЗАДАТЬ ВОПРОС</h2>
 
-                    <p class='med'>По желанию Вы можете оставить контакты для обратной связи. <br> Другим пользователям они не будут видны.</p>
+                    <p class='med comfortaa-sm'>По желанию Вы можете оставить контакты для обратной связи. <br> Другим пользователям они не будут видны.</p>
                     
-                    <form method="post">
+                    <form class="comfortaa-sm" method="post">
                         {% csrf_token %}
                         
                         {% if form.non_field_errors %}
