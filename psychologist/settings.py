@@ -37,6 +37,15 @@ ALLOWED_HOSTS = [
     "korekiwi-psychologist-app-39a0.twc1.net",
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    "http://127.0.0.1",
+    "https://127.0.0.1",
+    "http://188.225.44.169",
+    "https://188.225.44.169",
+    "http://korekiwi-psychologist-app-39a0.twc1.net",
+    "https://korekiwi-psychologist-app-39a0.twc1.net",
+]
+
 
 # Application definition
 
