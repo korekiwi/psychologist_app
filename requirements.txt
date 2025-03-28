@@ -5,3 +5,4 @@ django-jazzmin
 python-telegram-bot
 pillow
 gunicorn
+tzdata
